@@ -4,9 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- For logo font from google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- end -->
     <title>Odin Project Sign-Up Form</title>
 </head>
 <body>
-    <h1>Init Commit</h1>
+    <div class="main-image">
+        <img src="Assets/Main_Illustration-j2owIFs_1747996961348_raw.jpg" alt="A cartoon of a young boy studying at his desk">
+    </div>
+    <div class="main-container-right">
+        <header>
+            <h1>
+                Fast track your learning - 
+            </h1>
+            <h2>
+                Get Started
+            </h2>
+        </header>
+
+        <div class="logo">SALIENT.ED™</div>
+
+
+        <form action="/submit" method="post">
+
+            <div class = "form-container">
+                
+                
+
+                <div class="form-group">
+                    <input type="text" 
+                    name="user_first_name" 
+                    id="firstname" 
+                    class="form-control" 
+                    placeholder="FIRST NAME" 
+                    required
+                    minlength="3"
+                    pattern="^[a-zA-Z0-9]+$"
+                    title="Username must be at least 3 characters and contain only letters and numbers"
+                    >
+                    <label for="firstname">FIRST NAME</label>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" 
+                    name="user_last_name" 
+                    id="lastname" 
+                    class="form-control" 
+                    placeholder="LAST NAME"
+                    required
+                    minlength="3"
+                    pattern="^[a-zA-Z0-9]+$"
+                    title="Username must be at least 3 characters and contain only letters and numbers"
+                    >
+                    <label for="lastname">LAST NAME</label>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" 
+                    name="user_email" 
+                    id="email" 
+                    class="form-control" 
+                    placeholder="EMAIL"
+                    required
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                    title="Please enter a valid email"
+                    >
+                    <label for="email">E-MAIL</label>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" 
+                    name="user_tel"
+                    id="phonenumber" 
+                    class="form-control" 
+                    placeholder="PHONE NUMBER"
+                    title="Please enter a valid phone number"
+                    required 
+                    >
+                    <label for="phonenumber">PHONE NUMBER</label>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" 
+                    name="user_password" 
+                    id="password" 
+                    class="form-control" 
+                    placeholder="PASSWORD"
+                    required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
+                    title="Password must be at least 8 characters and include at least one uppercase letter, one lowercase letter, and one number"
+                    >
+                    <label for="password">PASSWORD</label>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" 
+                    name="user_conf_password" 
+                    id="conf-password" 
+                    class="form-control" 
+                    placeholder="CONFRIM PASSWORD"
+                    required
+                    >
+                    <label for="conf-password">CONFIRM PASSWORD</label>
+                    <p class="error"></p>
+                </div>
+            </div>
+        
+            <button class="create-acc">Create Account</button>
+            <div class="login">Already have an account? <span>LOG IN</span></div>
+        </form>
+
+        
+    </div>
+
+    
 </body>
 </html>
